@@ -1,0 +1,32 @@
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  ORG: "NGR-SB00"
+  PROJECT: "NDR-SB00"
+  ITERATION_PATH: "NDR-SB00\\Iteration 1"
+  RELEASE_ID: "3"
+  POINTS_FIELD_REF: "Microsoft.VSTS.Scheduling.Effort"
+  RELEASE_POINTS_FIELD_REF: "Custom.TotalEstimatedStoryPoints"
+
+steps:
+  - checkout: self
+    persistCredentials: true
+
+  - task: PowerShell@2
+    displayName: "Sum Feature Effort and write into Program Release"
+    inputs:
+      pwsh: true
+      targetType: filePath
+      filePath: sum-features-to-programrelease.ps1
+      arguments: >
+        -Org "$(ORG)"
+        -Project "$(PROJECT)"
+        -IterationPath "$(ITERATION_PATH)"
+        -ReleaseId $(RELEASE_ID)
+        -PointsFieldRef "$(POINTS_FIELD_REF)"
+        -ReleasePointsFieldRef "$(RELEASE_POINTS_FIELD_REF)"
+    env:
+      SYSTEM_ACCESSTOKEN: $(System.AccessToken)
