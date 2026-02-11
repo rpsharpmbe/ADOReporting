@@ -4,7 +4,7 @@ pool:
   name: "NGR-SANDBOX-Agents"
 
 variables:
-  ORG: "NGR-SB00"
+  ORG: "NGR-SANDBOX"
   PROJECT: "NDR-SB00"
   ITERATION_PATH: "NDR-SB00\\Iteration 1"
   RELEASE_ID: "3"
