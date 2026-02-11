@@ -111,6 +111,7 @@ WHERE
   AND [System.WorkItemType] = 'Feature'
   AND [System.State] <> 'Removed'
   AND [System.IterationPath] UNDER '$IterationPath'
+  AND [System.Tags] CONTAINS 'NGR-NDR-R2.0'
 ORDER BY [System.ChangedDate] DESC
 "@
 
