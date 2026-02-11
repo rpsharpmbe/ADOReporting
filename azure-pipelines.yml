@@ -1,7 +1,7 @@
 trigger: none
 
 pool:
-  vmImage: ubuntu-latest
+  name: "NGR-SANDBOX-Agents"
 
 variables:
   ORG: "NGR-SB00"
