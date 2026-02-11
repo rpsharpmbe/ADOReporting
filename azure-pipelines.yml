@@ -20,7 +20,7 @@ steps:
     inputs:
       pwsh: true
       targetType: filePath
-      filePath: sum-features-to-programrelease.ps1
+      filePath: sum-features-to-programrelease_PAT-and-AccessToken.ps1
       arguments: >
         -Org "$(ORG)"
         -Project "$(PROJECT)"
