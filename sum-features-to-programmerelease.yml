@@ -7,7 +7,7 @@ variables:
   ORG: "NGR-SANDBOX"
   PROJECT: "NDR-SB00"
   ITERATION_PATH: "NDR-SB00\\Iteration 1"
-  RELEASE_ID: "3"
+  RELEASE_ID: "6912"
   POINTS_FIELD_REF: "Microsoft.VSTS.Scheduling.Effort"
   RELEASE_POINTS_FIELD_REF: "Custom.TotalEstimatedStoryPoints"
 
